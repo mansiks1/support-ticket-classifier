@@ -1,0 +1,31 @@
+name: tests
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements-dev.lock
+      - run: python -m pip install --no-deps -e .
+      - run: ruff check .
+      - run: ruff format --check .
+      - run: python -m pytest -q
+      - name: Compile optional experiment (no heavy training in CI)
+        run: python -m compileall -q src api
+      - name: Container integration using synthetic fixture model
+        run: |
+          python scripts/smoke_artifact.py
+          docker build -t support-ticket-classifier .
+          docker run -d --name ticket-api -p 8000:8000 -v "$PWD/models:/app/models:ro" support-ticket-classifier
+          for i in $(seq 1 30); do curl -fsS http://localhost:8000/health && break || sleep 2; done
+          curl -fsS http://localhost:8000/health
+          curl -fsS -H 'Content-Type: application/json' -d '{"text":"lost my card"}' http://localhost:8000/predict
+          docker stop ticket-api

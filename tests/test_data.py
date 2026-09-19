@@ -57,3 +57,25 @@ def test_split_groups_disjoint_and_reproducible():
     for name in first:
         assert first[name].equals(second[name])
     assert sum(map(len, first.values())) == len(frame)
+
+
+def test_download_local_cache_and_checksum(tmp_path, monkeypatch):
+    import src.data as data
+
+    monkeypatch.setattr(data, "RAW", tmp_path / "raw")
+    monkeypatch.setattr(data, "ROOT", tmp_path)
+    data.RAW.mkdir()
+    path = data.RAW / "train.csv"
+    path.write_bytes(b"text,category\ncard,a\n")
+    assert data.download("train.csv") == path
+    path.write_bytes(b"tampered")
+    with pytest.raises(ValueError, match="Checksum"):
+        data.download("train.csv")
+
+
+def test_test_sealed_until_selection(tmp_path, monkeypatch):
+    import src.data as data
+
+    monkeypatch.setattr(data, "REPORTS", tmp_path)
+    with pytest.raises(RuntimeError, match="sealed"):
+        data.download("test.csv")
