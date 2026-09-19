@@ -1,0 +1,16 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows",
+  "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cpu_count": 16,
+  "ram_gb": 23.71471405029297,
+  "threads": 1,
+  "seed": 2026,
+  "versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.7.2",
+    "joblib": "1.5.2"
+  }
+}
