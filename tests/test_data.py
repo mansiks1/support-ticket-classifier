@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 
-from src.data import clean, normalise, validate, download
+from src.data import clean, normalise, validate, download, duplicate_groups, split_groups
 
 
 def test_schema():
@@ -30,3 +30,30 @@ def test_normalise_unicode():
 def test_unknown_download_rejected():
     with pytest.raises(ValueError):
         download("../../secret")
+
+
+def test_near_duplicates_grouped():
+    groups, _ = duplicate_groups(
+        ["Where is my bank card", "Where is my bank card", "Transfer failed"]
+    )
+    assert groups[0] == groups[1]
+    assert groups[0] != groups[2]
+
+
+def test_split_groups_disjoint_and_reproducible():
+    frame = pd.DataFrame(
+        [
+            {
+                "text": f"{label} item {i}",
+                "category": label,
+                "key": f"{label}-{i}",
+                "group": j * 50 + i,
+            }
+            for j, label in enumerate(["a", "b", "c"])
+            for i in range(50)
+        ]
+    )
+    first, second = split_groups(frame), split_groups(frame)
+    for name in first:
+        assert first[name].equals(second[name])
+    assert sum(map(len, first.values())) == len(frame)

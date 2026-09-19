@@ -19,7 +19,9 @@ from src.config import BASE_URL, PROCESSED, RAW, REPORTS, ROOT, SEED
 
 def save_json(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, indent=2, ensure_ascii=False), encoding="utf-8")
+    path.write_text(
+        json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n"
+    )
 
 
 def sha256(path):
@@ -133,7 +135,7 @@ def prepare():
     }
     save_json(REPORTS / "data-audit.json", audit)
     PROCESSED.mkdir(parents=True, exist_ok=True)
-    cleaned.to_csv(PROCESSED / "development.csv", index=False)
+    cleaned.to_csv(PROCESSED / "development.csv", index=False, lineterminator="\n")
     print(json.dumps({k: v for k, v in audit.items() if k != "class_counts"}, indent=2))
 
 
@@ -145,7 +147,7 @@ def split():
     manifest = {"seed": SEED, **duplicate_audit, "splits": {}}
     for name, part in parts.items():
         path = PROCESSED / f"{name}.csv"
-        part.to_csv(path, index=False)
+        part.to_csv(path, index=False, lineterminator="\n")
         manifest["splits"][name] = {
             "rows": len(part),
             "classes": part.category.nunique(),
