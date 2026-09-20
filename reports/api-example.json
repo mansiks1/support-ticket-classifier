@@ -1,0 +1,11 @@
+{
+  "predictions": [
+    {
+      "category": "card_arrival",
+      "suggested_category": "card_arrival",
+      "confidence": 0.8823409676551819,
+      "priority": null,
+      "requires_human": false
+    }
+  ]
+}

@@ -12,6 +12,8 @@ data/raw/
 data/processed/
 models/*
 !models/README.md
+!models/THIRD_PARTY.md
+!models/LICENSE-APACHE-2.0.txt
 mlruns/
 mlartifacts/
 *.db

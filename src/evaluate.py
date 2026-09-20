@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import math
 
 import joblib
 import numpy as np
@@ -23,6 +24,21 @@ def wilson(correct, total):
     center = (p + z * z / (2 * total)) / (1 + z * z / total)
     half = z * np.sqrt(p * (1 - p) / total + z * z / (4 * total * total)) / (1 + z * z / total)
     return [float(center - half), float(center + half)]
+
+
+def equivalent(actual, expected):
+    """Exact structure/counts, 1e-6 tolerance for floating GPU/CPU summaries."""
+    if isinstance(expected, dict):
+        return actual.keys() == expected.keys() and all(
+            equivalent(actual[k], v) for k, v in expected.items()
+        )
+    if isinstance(expected, list):
+        return len(actual) == len(expected) and all(
+            equivalent(a, b) for a, b in zip(actual, expected)
+        )
+    if isinstance(expected, float):
+        return math.isclose(actual, expected, rel_tol=1e-6, abs_tol=1e-6)
+    return actual == expected
 
 
 def main(verify=False):
@@ -97,9 +113,9 @@ def main(verify=False):
     }
     if verify:
         prior = json.loads(result_path.read_text())
-        if result != prior:
-            raise AssertionError("Frozen test metrics do not reproduce exactly")
-        print("Frozen test metrics reproduced exactly; no selection changes")
+        if not equivalent(result, prior):
+            raise AssertionError("Frozen test metrics differ beyond 1e-6 numerical tolerance")
+        print("Frozen test metrics reproduced within 1e-6; no selection changes")
         return
     save_json(result_path, result)
     save_json(

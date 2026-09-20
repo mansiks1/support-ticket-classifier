@@ -1,0 +1,10 @@
+{
+  "device": "cpu",
+  "threads": 1,
+  "batch_size": 32,
+  "repeats": 5,
+  "cold_load_and_first_seconds": 62.31877959999997,
+  "single_ms": 28.86060000002999,
+  "batch_ms_per_item": 37.29489062500235,
+  "process_rss_mb": 806.96875
+}

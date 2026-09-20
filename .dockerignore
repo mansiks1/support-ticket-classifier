@@ -2,6 +2,7 @@
 !Dockerfile
 !pyproject.toml
 !requirements.lock
+!requirements-transformer.lock
 !src/
 !src/**
 !api/

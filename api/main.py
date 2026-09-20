@@ -15,6 +15,8 @@ def create_app(model_path=None):
     @asynccontextmanager
     async def lifespan(app):
         app.state.predictor = Predictor(path) if path.exists() else None
+        if app.state.predictor is not None:
+            app.state.predictor.predict("bank card")
         yield
 
     app = FastAPI(title="Support Ticket Classifier", version="1.0.0", lifespan=lifespan)

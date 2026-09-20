@@ -1,0 +1,16 @@
+{
+  "python": "3.12.14",
+  "local_tests_passed": 41,
+  "clean_environment_tests_passed": 41,
+  "lint_passed": true,
+  "clean_data_download_and_split_passed": true,
+  "clean_baseline_metrics_match": true,
+  "frozen_test_exact_reproduction_on_original_environment": true,
+  "real_final_model_http_checks_passed": 10,
+  "executed_notebooks": {"01_eda.ipynb": 5, "02_experiments.ipynb": 7},
+  "classical_docker_build_passed_locally": true,
+  "ci_classical_container_http_passed": true,
+  "ci_evidence": "https://github.com/mansiks1/support-ticket-classifier/actions/runs/35496633820",
+  "final_transformer_container_verified": false,
+  "remaining_container_check": "Docker Desktop engine unavailable after initial classical build; final image verification pending"
+}

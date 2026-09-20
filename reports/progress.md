@@ -12,3 +12,4 @@
 - DistilBERT completed on RTX 4050: validation macro-F1 0.868122, 80.898 s fit, 269013758 bytes. Includes pinned upstream revision and actual weights.
 - Selection frozen before test: DistilBERT, temperature 0.7655438, threshold 0.75; validation coverage 0.820474 and accepted accuracy 0.950830. First GitHub Actions run passed.
 - Final frozen test executed and exact verification passed: macro-F1 0.881932; overlap-excluded 0.872594; coverage 0.806494, accepted accuracy 0.959742. Real final-model HTTP smoke: 10 checks passed.
+- Final-model startup warmup ensures health only reports ready after weights load. CPU serving measured; dependency locks and reproducibility tools prepared. Final Transformer container check pending Docker Engine recovery.
