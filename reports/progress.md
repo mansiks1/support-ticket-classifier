@@ -10,3 +10,4 @@
 - API implemented and exercised through FastAPI TestClient with trained synthetic fixture: 35 tests passed. Production artifact still awaits final selection.
 - 41 local tests passed including calibration, input limits, split integrity and sealed-test guards. Added reproducible dependency locks and CI.
 - DistilBERT completed on RTX 4050: validation macro-F1 0.868122, 80.898 s fit, 269013758 bytes. Includes pinned upstream revision and actual weights.
+- Selection frozen before test: DistilBERT, temperature 0.7655438, threshold 0.75; validation coverage 0.820474 and accepted accuracy 0.950830. First GitHub Actions run passed.

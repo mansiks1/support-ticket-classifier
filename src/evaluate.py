@@ -39,6 +39,10 @@ def main(verify=False):
         raise ValueError("Experiment log changed after freeze")
     if sha256(REPORTS / "splits.json") != selected["splits_sha256"]:
         raise ValueError("Split manifest changed after freeze")
+    if "transformer_files" in selected:
+        for name, digest in selected["transformer_files"].items():
+            if sha256(MODELS / "distilbert" / name) != digest:
+                raise ValueError("Transformer artifact changed after freeze")
     test = pd.read_csv(download("test.csv"))
     if not validate(test).all():
         raise ValueError("Invalid official test rows; do not silently drop")

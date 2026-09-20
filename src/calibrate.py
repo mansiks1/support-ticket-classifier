@@ -83,6 +83,11 @@ def main():
         "experiments_sha256": sha256(REPORTS / "experiments.json"),
         "splits_sha256": sha256(REPORTS / "splits.json"),
     }
+    if (REPORTS / "transformer.json").exists():
+        metadata["transformer_report_sha256"] = sha256(REPORTS / "transformer.json")
+        metadata["transformer_files"] = {
+            f.name: sha256(f) for f in sorted((MODELS / "distilbert").glob("*")) if f.is_file()
+        }
     save_json(
         REPORTS / "calibration.json",
         {
