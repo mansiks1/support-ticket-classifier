@@ -9,3 +9,4 @@
 - Classical and 8 one-factor preprocessing experiments executed: 17 total configurations. SVM C=0.5 leads validation at 0.8519 macro-F1. Test remains sealed.
 - API implemented and exercised through FastAPI TestClient with trained synthetic fixture: 35 tests passed. Production artifact still awaits final selection.
 - 41 local tests passed including calibration, input limits, split integrity and sealed-test guards. Added reproducible dependency locks and CI.
+- DistilBERT completed on RTX 4050: validation macro-F1 0.868122, 80.898 s fit, 269013758 bytes. Includes pinned upstream revision and actual weights.

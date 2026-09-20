@@ -1,0 +1,40 @@
+{
+  "name": "distilbert_2epochs",
+  "model_id": "distilbert/distilbert-base-uncased",
+  "revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "config": {
+    "method": "transformer",
+    "epochs": 2
+  },
+  "license": "Apache-2.0",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "epochs": 2,
+  "seed": 2026,
+  "lr": 5e-05,
+  "batch_size": 16,
+  "max_length": 96,
+  "train_seconds": 80.89846699999907,
+  "validation": {
+    "accuracy": 0.875441250630358,
+    "macro_f1": 0.8681220022032152,
+    "weighted_f1": 0.874587284656971,
+    "top2_accuracy": 0.9435199193141705,
+    "macro_ap": 0.9464677638084941
+  },
+  "batch_ms_per_item": 0.7383484619272495,
+  "single_ms": 8.264799998869421,
+  "model_bytes": 269013758,
+  "peak_gpu_mb": 1301.076171875,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 2.773061350286405
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.684730583620326
+    }
+  ],
+  "torch": "2.8.0+cu128"
+}

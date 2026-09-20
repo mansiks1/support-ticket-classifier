@@ -33,6 +33,13 @@ Defaults documented in persisted parameters. No combinatorial sweep.
 Transformer: a separate reproducible DistilBERT script; run only if resources
 support a meaningful experiment. Unrun work has no result row and no quality claim.
 
+Pre-result resource amendment: RTX 4050 6 GB is available. Run
+distilbert-base-uncased revision 12040accade4e8a0f71eabdb258fecc2e7e948be,
+2 epochs, batch=16, max_length=96, AdamW lr=5e-5, weight_decay=.01,
+gradient norm clipping=1.0, seed=2026. No epoch selection or extra sweep.
+Include its validation result in the same selection rule. GPU latency is explicitly
+labelled and must not be interpreted as a controlled CPU-only speed comparison.
+
 ## Decision rule
 
 Primary metric macro-F1 to weight all intents equally; also accuracy, weighted-F1,
