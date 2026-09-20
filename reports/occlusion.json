@@ -1,0 +1,252 @@
+[
+  {
+    "text": "When did you send me my new card?",
+    "predicted": "card_arrival",
+    "word_removal_delta": [
+      {
+        "word": "When",
+        "delta": -0.37733161449432373
+      },
+      {
+        "word": "did",
+        "delta": 0.21999487280845642
+      },
+      {
+        "word": "you",
+        "delta": -0.05332314968109131
+      },
+      {
+        "word": "send",
+        "delta": -0.12778925895690918
+      },
+      {
+        "word": "me",
+        "delta": -0.03303956985473633
+      },
+      {
+        "word": "my",
+        "delta": -0.11238306760787964
+      },
+      {
+        "word": "new",
+        "delta": 0.45961323380470276
+      },
+      {
+        "word": "card?",
+        "delta": 0.49670231342315674
+      }
+    ]
+  },
+  {
+    "text": "Can you track my card for me?",
+    "predicted": "card_arrival",
+    "word_removal_delta": [
+      {
+        "word": "Can",
+        "delta": -0.03860682249069214
+      },
+      {
+        "word": "you",
+        "delta": -0.04469931125640869
+      },
+      {
+        "word": "track",
+        "delta": 0.840610921382904
+      },
+      {
+        "word": "my",
+        "delta": 0.043002426624298096
+      },
+      {
+        "word": "card",
+        "delta": 0.669608473777771
+      },
+      {
+        "word": "for",
+        "delta": 0.0325198769569397
+      },
+      {
+        "word": "me?",
+        "delta": -0.004293084144592285
+      }
+    ]
+  },
+  {
+    "text": "Will I be able to track the card that was sent to me?",
+    "predicted": "card_arrival",
+    "word_removal_delta": [
+      {
+        "word": "Will",
+        "delta": -0.00045233964920043945
+      },
+      {
+        "word": "I",
+        "delta": -0.005681395530700684
+      },
+      {
+        "word": "be",
+        "delta": -0.0006605386734008789
+      },
+      {
+        "word": "able",
+        "delta": -0.013384699821472168
+      },
+      {
+        "word": "to",
+        "delta": 0.007895469665527344
+      },
+      {
+        "word": "track",
+        "delta": 0.6442614793777466
+      },
+      {
+        "word": "the",
+        "delta": 0.0007752180099487305
+      },
+      {
+        "word": "card",
+        "delta": 0.330849289894104
+      },
+      {
+        "word": "that",
+        "delta": 0.0024513602256774902
+      },
+      {
+        "word": "was",
+        "delta": -0.021314024925231934
+      },
+      {
+        "word": "sent",
+        "delta": 0.058679401874542236
+      },
+      {
+        "word": "to",
+        "delta": -0.027311742305755615
+      },
+      {
+        "word": "me?",
+        "delta": -0.0013380050659179688
+      }
+    ]
+  },
+  {
+    "text": "I don't have my card in 1 week.  Should I be worried?",
+    "predicted": "card_delivery_estimate",
+    "word_removal_delta": [
+      {
+        "word": "I",
+        "delta": -0.06498205661773682
+      },
+      {
+        "word": "don't",
+        "delta": -0.17651641368865967
+      },
+      {
+        "word": "have",
+        "delta": 0.10077780485153198
+      },
+      {
+        "word": "my",
+        "delta": -0.007016122341156006
+      },
+      {
+        "word": "card",
+        "delta": 0.1019282341003418
+      },
+      {
+        "word": "in",
+        "delta": 0.29127779603004456
+      },
+      {
+        "word": "1",
+        "delta": 0.22817835211753845
+      },
+      {
+        "word": "week.",
+        "delta": 0.5290206074714661
+      },
+      {
+        "word": "Should",
+        "delta": 0.013524055480957031
+      },
+      {
+        "word": "I",
+        "delta": 0.024991273880004883
+      },
+      {
+        "word": "be",
+        "delta": 0.00013458728790283203
+      },
+      {
+        "word": "worried?",
+        "delta": -0.2010532021522522
+      }
+    ]
+  },
+  {
+    "text": "It's been a week since you sent my card and I still don't have it.",
+    "predicted": "card_arrival",
+    "word_removal_delta": [
+      {
+        "word": "It's",
+        "delta": -0.0006295442581176758
+      },
+      {
+        "word": "been",
+        "delta": 0.004073739051818848
+      },
+      {
+        "word": "a",
+        "delta": -0.0006376504898071289
+      },
+      {
+        "word": "week",
+        "delta": 0.002277672290802002
+      },
+      {
+        "word": "since",
+        "delta": 0.002507627010345459
+      },
+      {
+        "word": "you",
+        "delta": -6.669759750366211e-05
+      },
+      {
+        "word": "sent",
+        "delta": 0.01659160852432251
+      },
+      {
+        "word": "my",
+        "delta": 0.014653384685516357
+      },
+      {
+        "word": "card",
+        "delta": 0.9416531920433044
+      },
+      {
+        "word": "and",
+        "delta": -0.001095592975616455
+      },
+      {
+        "word": "I",
+        "delta": -0.0006996393203735352
+      },
+      {
+        "word": "still",
+        "delta": 0.00881582498550415
+      },
+      {
+        "word": "don't",
+        "delta": 0.0018332600593566895
+      },
+      {
+        "word": "have",
+        "delta": -0.00016045570373535156
+      },
+      {
+        "word": "it.",
+        "delta": 0.0019532442092895508
+      }
+    ]
+  }
+]

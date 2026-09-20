@@ -1,0 +1,144 @@
+[
+  {
+    "probe": "clean",
+    "text": "My card has not arrived yet",
+    "length": 27,
+    "category": "card_arrival",
+    "suggested_category": "card_arrival",
+    "confidence": 0.8823409676551819,
+    "priority": null,
+    "requires_human": false
+  },
+  {
+    "probe": "typo",
+    "text": "My crad has not arived yet",
+    "length": 26,
+    "category": null,
+    "suggested_category": "pending_transfer",
+    "confidence": 0.35813355445861816,
+    "priority": null,
+    "requires_human": true
+  },
+  {
+    "probe": "case",
+    "text": "MY CARD HAS NOT ARRIVED YET",
+    "length": 27,
+    "category": "card_arrival",
+    "suggested_category": "card_arrival",
+    "confidence": 0.8823409676551819,
+    "priority": null,
+    "requires_human": false
+  },
+  {
+    "probe": "spaces",
+    "text": "  My   card has not   arrived yet  ",
+    "length": 35,
+    "category": "card_arrival",
+    "suggested_category": "card_arrival",
+    "confidence": 0.8823409676551819,
+    "priority": null,
+    "requires_human": false
+  },
+  {
+    "probe": "short",
+    "text": "card",
+    "length": 4,
+    "category": null,
+    "suggested_category": "card_acceptance",
+    "confidence": 0.3606041669845581,
+    "priority": null,
+    "requires_human": true
+  },
+  {
+    "probe": "long",
+    "text": "My card has not arrived yet. My card has not arrived yet. My card has not arrived yet. My card has not arrived yet. My card has not arrived yet. My card has not arrived yet. My card has not arrived yet. My card has not arrived yet. My card has not ar",
+    "length": 2900,
+    "category": "card_arrival",
+    "suggested_category": "card_arrival",
+    "confidence": 0.843729555606842,
+    "priority": null,
+    "requires_human": false
+  },
+  {
+    "probe": "empty",
+    "text": "",
+    "length": 0,
+    "error": "Texts must be nonblank strings of at most 4000 characters"
+  },
+  {
+    "probe": "unknown",
+    "text": "qzxwvv jklzz",
+    "length": 12,
+    "category": null,
+    "suggested_category": "automatic_top_up",
+    "confidence": 0.17384371161460876,
+    "priority": null,
+    "requires_human": true
+  },
+  {
+    "probe": "mixed",
+    "text": "Моя card не работает",
+    "length": 20,
+    "category": null,
+    "suggested_category": "topping_up_by_card",
+    "confidence": 0.08981568366289139,
+    "priority": null,
+    "requires_human": true
+  },
+  {
+    "probe": "russian",
+    "text": "Деньги списались, но заказ не оформился",
+    "length": 39,
+    "category": null,
+    "suggested_category": "topping_up_by_card",
+    "confidence": 0.049948640167713165,
+    "priority": null,
+    "requires_human": true
+  },
+  {
+    "probe": "ood_weather",
+    "text": "What will the weather be like tomorrow?",
+    "length": 39,
+    "category": "card_delivery_estimate",
+    "suggested_category": "card_delivery_estimate",
+    "confidence": 0.8913251757621765,
+    "priority": null,
+    "requires_human": false
+  },
+  {
+    "probe": "ood_food",
+    "text": "How do I bake a chocolate cake?",
+    "length": 31,
+    "category": null,
+    "suggested_category": "top_up_by_cash_or_cheque",
+    "confidence": 0.5455306768417358,
+    "priority": null,
+    "requires_human": true
+  },
+  {
+    "probe": "ambiguous",
+    "text": "My card payment is pending and the exchange rate looks wrong",
+    "length": 60,
+    "category": "pending_card_payment",
+    "suggested_category": "pending_card_payment",
+    "confidence": 0.911072313785553,
+    "priority": null,
+    "requires_human": false
+  },
+  {
+    "probe": "unicode",
+    "text": "💳🌏\u0000",
+    "length": 3,
+    "category": null,
+    "suggested_category": "top_up_failed",
+    "confidence": 0.11081616580486298,
+    "priority": null,
+    "requires_human": true
+  },
+  {
+    "probe": "too_long",
+    "text": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "length": 4001,
+    "error": "Texts must be nonblank strings of at most 4000 characters"
+  }
+]

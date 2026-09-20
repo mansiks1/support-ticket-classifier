@@ -1,0 +1,98 @@
+{
+  "selection_sha256": "6000bf087b907c9fbfe92e09114b0684c2cc6a8cd8ef31110775aedc3756cc88",
+  "test_rows": 3080,
+  "test_sha256": "d12d6e3bc4c3103966ae786dc435913c0c563dfa328f5a3646d0e62cfeeb474d",
+  "exact_overlap_rows": 25,
+  "near_or_exact_overlap_rows": 367,
+  "decontaminated_rows": 2713,
+  "practical": {
+    "model": "distilbert_2epochs",
+    "official": {
+      "accuracy": 0.8831168831168831,
+      "macro_f1": 0.8819323034078578,
+      "weighted_f1": 0.881932303407858,
+      "top2_accuracy": 0.9470779220779221,
+      "macro_ap": 0.9458161375769492
+    },
+    "decontaminated": {
+      "accuracy": 0.8746774788057501,
+      "macro_f1": 0.8725936375861522,
+      "weighted_f1": 0.8739510464329119,
+      "top2_accuracy": 0.9413932915591596,
+      "macro_ap": 0.9396682468109248
+    },
+    "calibration": {
+      "nll": 0.42522597851084665,
+      "brier": 0.1746662144756503,
+      "ece": 0.011332829499786564,
+      "bins": [
+        {
+          "count": 7,
+          "confidence": 0.16941049695014954,
+          "accuracy": 0.42857142857142855
+        },
+        {
+          "count": 19,
+          "confidence": 0.266500324010849,
+          "accuracy": 0.2631578947368421
+        },
+        {
+          "count": 51,
+          "confidence": 0.35756686329841614,
+          "accuracy": 0.47058823529411764
+        },
+        {
+          "count": 116,
+          "confidence": 0.4491358697414398,
+          "accuracy": 0.4482758620689655
+        },
+        {
+          "count": 156,
+          "confidence": 0.5494884848594666,
+          "accuracy": 0.5833333333333334
+        },
+        {
+          "count": 160,
+          "confidence": 0.6505085229873657,
+          "accuracy": 0.625
+        },
+        {
+          "count": 183,
+          "confidence": 0.7527657747268677,
+          "accuracy": 0.7704918032786885
+        },
+        {
+          "count": 284,
+          "confidence": 0.856354832649231,
+          "accuracy": 0.8732394366197183
+        },
+        {
+          "count": 2104,
+          "confidence": 0.9725459218025208,
+          "accuracy": 0.9771863117870723
+        }
+      ]
+    },
+    "selective": {
+      "threshold": 0.75,
+      "accepted": 2484,
+      "coverage": 0.8064935064935065,
+      "human": 596,
+      "accuracy": 0.9597423510466989,
+      "accuracy_wilson_95": [
+        0.9512758142914538,
+        0.9667890657234154
+      ]
+    }
+  },
+  "research": {
+    "model": "distilbert_2epochs",
+    "official": {
+      "accuracy": 0.8831168831168831,
+      "macro_f1": 0.8819323034078578,
+      "weighted_f1": 0.881932303407858,
+      "top2_accuracy": 0.9470779220779221,
+      "macro_ap": 0.9455268604816959
+    }
+  }
+}

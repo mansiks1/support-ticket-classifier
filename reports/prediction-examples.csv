@@ -1,0 +1,41 @@
+text,true,predicted,confidence,correct,runner_up,sample
+"I need to exchange between different currencies, like GBP and USD. Can I do that with your app?",exchange_via_app,exchange_via_app,0.9728582,True,supported_cards_and_currencies,correct
+My card expires next week. How do I get a new one?,card_about_to_expire,card_about_to_expire,0.99256986,True,card_delivery_estimate,correct
+"I saw on the app that a cash withdrawal was completed on my account; however, I did not complete it.",cash_withdrawal_not_recognised,cash_withdrawal_not_recognised,0.83467656,True,pending_cash_withdrawal,correct
+Can I add money automatically to my account while traveling?,automatic_top_up,automatic_top_up,0.9926528,True,supported_cards_and_currencies,correct
+"I don't see my refund money yet in my account. I asked the merchant a while ago for a refund, so I don't know what's taking so long.  Can you look into it and see if the money is there, just not in my account yet?",Refund_not_showing_up,Refund_not_showing_up,0.924885,True,request_refund,correct
+I am having some difficulty verifying my id.,unable_to_verify_identity,unable_to_verify_identity,0.8941931,True,why_verify_identity,correct
+I transferred money but the recipient does not see the funds in their account?,transfer_not_received_by_recipient,transfer_not_received_by_recipient,0.7510468,True,balance_not_updated_after_bank_transfer,correct
+"It is still pending, I am still waiting. Your system just shows my top-up as pending. What is happening?",pending_top_up,pending_top_up,0.9914954,True,topping_up_by_card,correct
+I tried paying with my disposable virtual card earlier but it was rejected. What can I do to fix this?,virtual_card_not_working,virtual_card_not_working,0.40336087,True,get_disposable_virtual_card,correct
+Please list the countries you support.,country_support,country_support,0.9878919,True,supported_cards_and_currencies,correct
+Does it cost me to add cash?,top_up_by_bank_transfer_charge,top_up_by_card_charge,0.74711066,False,top_up_by_cash_or_cheque,error
+I have a friend who needs money as soon as possibly. If I were to transfer it how long will it take to get to her?,transfer_not_received_by_recipient,transfer_timing,0.82749605,False,pending_transfer,error
+I hope you can help me. My account has been compromised from a different town that I haven't been to. Can you please place a hold on my account until I can make it to the bank?,cash_withdrawal_not_recognised,compromised_card,0.18701315,False,beneficiary_not_allowed,error
+My top up did not complete.,pending_top_up,top_up_failed,0.69331414,False,pending_top_up,error
+"my identity hasn't been verified and i can't edit my details, what's next",edit_personal_details,unable_to_verify_identity,0.55546236,False,why_verify_identity,error
+You can use it anywhere that accepts Mastercard.,card_acceptance,visa_or_mastercard,0.9700603,False,supported_cards_and_currencies,error
+Where is my card?,card_arrival,order_physical_card,0.35551387,False,lost_or_stolen_card,error
+WHAT IS THE SOLUTION OF THIS PROBLEM,card_arrival,verify_my_identity,0.34717318,False,why_verify_identity,error
+"hey, I think someone stole my card numbers. There is a purchase showing up on my app from a store pretty far away from me.. I really need that money back to pay my rent.",direct_debit_payment_not_recognised,compromised_card,0.5328077,False,card_payment_not_recognised,error
+How do I replace my card?,card_about_to_expire,order_physical_card,0.32050127,False,card_linking,error
+What do you do with all the identity information you're collecting from me?,why_verify_identity,verify_my_identity,0.79937977,False,why_verify_identity,error
+Why can't I make a transfer?,failed_transfer,beneficiary_not_allowed,0.92917585,False,failed_transfer,error
+I am 16 and just started working at McDonalds can I deposit my checks at your bank?,age_limit,atm_support,0.39351392,False,top_up_by_cash_or_cheque,error
+I think my account has been hacked there are charges on there I don't recognize.,compromised_card,card_payment_not_recognised,0.52781576,False,compromised_card,error
+I tried to deposit a cheque into my account and it is not letting me.,top_up_by_cash_or_cheque,balance_not_updated_after_cheque_or_cash_deposit,0.94429266,False,top_up_by_cash_or_cheque,error
+How can I make my card ready to use?,activate_my_card,order_physical_card,0.64349204,False,card_acceptance,error
+I can't access my account.,passcode_forgotten,unable_to_verify_identity,0.30675244,False,terminate_account,error
+"Hello. Please, would you tell me if you have or have not received funds for a refund that I recently requested for a big purchase? I've contacted the merchant, but I can't tell that they have taken any action on it.",Refund_not_showing_up,request_refund,0.75917256,False,Refund_not_showing_up,error
+"app malfunctioning, does not know its me",unable_to_verify_identity,lost_or_stolen_phone,0.30276868,False,contactless_not_working,error
+What happened to my Top-Up? It's not reflected.,pending_top_up,top_up_reverted,0.4358615,False,top_up_failed,error
+I don't have my mobile device and am unable to make the payment because I forgot my details.,lost_or_stolen_phone,get_disposable_virtual_card,0.11312699,False,virtual_card_not_working,low_confidence
+Are there any express fees if i want my new card faster?,card_about_to_expire,getting_spare_card,0.15013282,False,card_acceptance,low_confidence
+can I use it all over the world?,country_support,supported_cards_and_currencies,0.164512,False,country_support,low_confidence
+can I choose delivery times to suite me?,card_delivery_estimate,visa_or_mastercard,0.16592889,False,automatic_top_up,low_confidence
+where do you have locations at,country_support,card_acceptance,0.17011768,False,atm_support,low_confidence
+I hope you can help me. My account has been compromised from a different town that I haven't been to. Can you please place a hold on my account until I can make it to the bank?,cash_withdrawal_not_recognised,compromised_card,0.18701315,False,beneficiary_not_allowed,low_confidence
+Can I use this all over the world?,country_support,country_support,0.18716882,True,age_limit,low_confidence
+"daughter needs card, how do i add her",getting_spare_card,order_physical_card,0.22209615,False,supported_cards_and_currencies,low_confidence
+I just had a look at my statement. Why have I been changed for using the ATM?,cash_withdrawal_charge,cash_withdrawal_not_recognised,0.23359495,False,declined_cash_withdrawal,low_confidence
+I think there has been a mistake with my transfer,declined_transfer,transfer_fee_charged,0.24846801,False,beneficiary_not_allowed,low_confidence
