@@ -14,3 +14,4 @@
 - Final frozen test executed and exact verification passed: macro-F1 0.881932; overlap-excluded 0.872594; coverage 0.806494, accepted accuracy 0.959742. Real final-model HTTP smoke: 10 checks passed.
 - Final-model startup warmup ensures health only reports ready after weights load. CPU serving measured; dependency locks and reproducibility tools prepared. Final Transformer container check pending Docker Engine recovery.
 - Technical report, distinct article, model card and five resume bullets generated from measured results; two notebooks executed (5 + 7 cells), plots visually inspected.
+- Release verification complete: clean CPU frozen metrics within 1e-6; final DistilBERT Docker image built and 10 real HTTP checks passed. All local documentation links valid.

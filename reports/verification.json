@@ -7,10 +7,18 @@
   "clean_baseline_metrics_match": true,
   "frozen_test_exact_reproduction_on_original_environment": true,
   "real_final_model_http_checks_passed": 10,
-  "executed_notebooks": {"01_eda.ipynb": 5, "02_experiments.ipynb": 7},
+  "executed_notebooks": {
+    "01_eda.ipynb": 5,
+    "02_experiments.ipynb": 7
+  },
   "classical_docker_build_passed_locally": true,
   "ci_classical_container_http_passed": true,
-  "ci_evidence": "https://github.com/mansiks1/support-ticket-classifier/actions/runs/35496633820",
-  "final_transformer_container_verified": false,
-  "remaining_container_check": "Docker Desktop engine unavailable after initial classical build; final image verification pending"
+  "ci_evidence": "https://github.com/mansiks1/support-ticket-classifier/actions/runs/35497622945",
+  "final_transformer_container_verified": true,
+  "clean_cpu_frozen_metrics_within_1e_6": true,
+  "clean_baseline_all_metrics_equal": true,
+  "clean_split_manifests_equal": true,
+  "documentation_local_links_valid": true,
+  "final_transformer_container_http_checks_passed": 10,
+  "final_container_image_id": "sha256:f4e5c85c6c6db8477494ebe247f3a410b5c26409a2fd1c157d0ad61d4304a033"
 }
